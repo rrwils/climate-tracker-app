@@ -1,0 +1,717 @@
+[
+    {
+      "year": 1880,
+      "annual_mean": -0.17,
+      "lowess": -0.1
+    },
+    {
+      "year": 1881,
+      "annual_mean": -0.09,
+      "lowess": -0.13
+    },
+    {
+      "year": 1882,
+      "annual_mean": -0.11,
+      "lowess": -0.17
+    },
+    {
+      "year": 1883,
+      "annual_mean": -0.18,
+      "lowess": -0.21
+    },
+    {
+      "year": 1884,
+      "annual_mean": -0.28,
+      "lowess": -0.24
+    },
+    {
+      "year": 1885,
+      "annual_mean": -0.33,
+      "lowess": -0.27
+    },
+    {
+      "year": 1886,
+      "annual_mean": -0.32,
+      "lowess": -0.27
+    },
+    {
+      "year": 1887,
+      "annual_mean": -0.37,
+      "lowess": -0.28
+    },
+    {
+      "year": 1888,
+      "annual_mean": -0.18,
+      "lowess": -0.27
+    },
+    {
+      "year": 1889,
+      "annual_mean": -0.11,
+      "lowess": -0.26
+    },
+    {
+      "year": 1890,
+      "annual_mean": -0.35,
+      "lowess": -0.26
+    },
+    {
+      "year": 1891,
+      "annual_mean": -0.23,
+      "lowess": -0.26
+    },
+    {
+      "year": 1892,
+      "annual_mean": -0.27,
+      "lowess": -0.27
+    },
+    {
+      "year": 1893,
+      "annual_mean": -0.31,
+      "lowess": -0.26
+    },
+    {
+      "year": 1894,
+      "annual_mean": -0.3,
+      "lowess": -0.24
+    },
+    {
+      "year": 1895,
+      "annual_mean": -0.23,
+      "lowess": -0.22
+    },
+    {
+      "year": 1896,
+      "annual_mean": -0.11,
+      "lowess": -0.21
+    },
+    {
+      "year": 1897,
+      "annual_mean": -0.11,
+      "lowess": -0.18
+    },
+    {
+      "year": 1898,
+      "annual_mean": -0.28,
+      "lowess": -0.17
+    },
+    {
+      "year": 1899,
+      "annual_mean": -0.18,
+      "lowess": -0.17
+    },
+    {
+      "year": 1900,
+      "annual_mean": -0.08,
+      "lowess": -0.2
+    },
+    {
+      "year": 1901,
+      "annual_mean": -0.15,
+      "lowess": -0.23
+    },
+    {
+      "year": 1902,
+      "annual_mean": -0.28,
+      "lowess": -0.26
+    },
+    {
+      "year": 1903,
+      "annual_mean": -0.37,
+      "lowess": -0.28
+    },
+    {
+      "year": 1904,
+      "annual_mean": -0.47,
+      "lowess": -0.31
+    },
+    {
+      "year": 1905,
+      "annual_mean": -0.26,
+      "lowess": -0.34
+    },
+    {
+      "year": 1906,
+      "annual_mean": -0.22,
+      "lowess": -0.36
+    },
+    {
+      "year": 1907,
+      "annual_mean": -0.39,
+      "lowess": -0.37
+    },
+    {
+      "year": 1908,
+      "annual_mean": -0.43,
+      "lowess": -0.39
+    },
+    {
+      "year": 1909,
+      "annual_mean": -0.49,
+      "lowess": -0.41
+    },
+    {
+      "year": 1910,
+      "annual_mean": -0.43,
+      "lowess": -0.41
+    },
+    {
+      "year": 1911,
+      "annual_mean": -0.44,
+      "lowess": -0.39
+    },
+    {
+      "year": 1912,
+      "annual_mean": -0.36,
+      "lowess": -0.35
+    },
+    {
+      "year": 1913,
+      "annual_mean": -0.34,
+      "lowess": -0.32
+    },
+    {
+      "year": 1914,
+      "annual_mean": -0.15,
+      "lowess": -0.31
+    },
+    {
+      "year": 1915,
+      "annual_mean": -0.14,
+      "lowess": -0.3
+    },
+    {
+      "year": 1916,
+      "annual_mean": -0.36,
+      "lowess": -0.29
+    },
+    {
+      "year": 1917,
+      "annual_mean": -0.46,
+      "lowess": -0.29
+    },
+    {
+      "year": 1918,
+      "annual_mean": -0.29,
+      "lowess": -0.3
+    },
+    {
+      "year": 1919,
+      "annual_mean": -0.27,
+      "lowess": -0.29
+    },
+    {
+      "year": 1920,
+      "annual_mean": -0.27,
+      "lowess": -0.27
+    },
+    {
+      "year": 1921,
+      "annual_mean": -0.18,
+      "lowess": -0.26
+    },
+    {
+      "year": 1922,
+      "annual_mean": -0.28,
+      "lowess": -0.25
+    },
+    {
+      "year": 1923,
+      "annual_mean": -0.26,
+      "lowess": -0.24
+    },
+    {
+      "year": 1924,
+      "annual_mean": -0.27,
+      "lowess": -0.23
+    },
+    {
+      "year": 1925,
+      "annual_mean": -0.22,
+      "lowess": -0.22
+    },
+    {
+      "year": 1926,
+      "annual_mean": -0.1,
+      "lowess": -0.21
+    },
+    {
+      "year": 1927,
+      "annual_mean": -0.21,
+      "lowess": -0.2
+    },
+    {
+      "year": 1928,
+      "annual_mean": -0.19,
+      "lowess": -0.19
+    },
+    {
+      "year": 1929,
+      "annual_mean": -0.36,
+      "lowess": -0.18
+    },
+    {
+      "year": 1930,
+      "annual_mean": -0.15,
+      "lowess": -0.18
+    },
+    {
+      "year": 1931,
+      "annual_mean": -0.09,
+      "lowess": -0.18
+    },
+    {
+      "year": 1932,
+      "annual_mean": -0.15,
+      "lowess": -0.17
+    },
+    {
+      "year": 1933,
+      "annual_mean": -0.28,
+      "lowess": -0.16
+    },
+    {
+      "year": 1934,
+      "annual_mean": -0.12,
+      "lowess": -0.15
+    },
+    {
+      "year": 1935,
+      "annual_mean": -0.19,
+      "lowess": -0.13
+    },
+    {
+      "year": 1936,
+      "annual_mean": -0.14,
+      "lowess": -0.1
+    },
+    {
+      "year": 1937,
+      "annual_mean": -0.02,
+      "lowess": -0.06
+    },
+    {
+      "year": 1938,
+      "annual_mean": 0,
+      "lowess": -0.01
+    },
+    {
+      "year": 1939,
+      "annual_mean": -0.02,
+      "lowess": 0.03
+    },
+    {
+      "year": 1940,
+      "annual_mean": 0.13,
+      "lowess": 0.07
+    },
+    {
+      "year": 1941,
+      "annual_mean": 0.19,
+      "lowess": 0.09
+    },
+    {
+      "year": 1942,
+      "annual_mean": 0.07,
+      "lowess": 0.11
+    },
+    {
+      "year": 1943,
+      "annual_mean": 0.09,
+      "lowess": 0.1
+    },
+    {
+      "year": 1944,
+      "annual_mean": 0.2,
+      "lowess": 0.08
+    },
+    {
+      "year": 1945,
+      "annual_mean": 0.09,
+      "lowess": 0.04
+    },
+    {
+      "year": 1946,
+      "annual_mean": -0.07,
+      "lowess": 0.01
+    },
+    {
+      "year": 1947,
+      "annual_mean": -0.02,
+      "lowess": -0.03
+    },
+    {
+      "year": 1948,
+      "annual_mean": -0.1,
+      "lowess": -0.07
+    },
+    {
+      "year": 1949,
+      "annual_mean": -0.11,
+      "lowess": -0.08
+    },
+    {
+      "year": 1950,
+      "annual_mean": -0.17,
+      "lowess": -0.07
+    },
+    {
+      "year": 1951,
+      "annual_mean": -0.07,
+      "lowess": -0.07
+    },
+    {
+      "year": 1952,
+      "annual_mean": 0.01,
+      "lowess": -0.07
+    },
+    {
+      "year": 1953,
+      "annual_mean": 0.08,
+      "lowess": -0.07
+    },
+    {
+      "year": 1954,
+      "annual_mean": -0.13,
+      "lowess": -0.07
+    },
+    {
+      "year": 1955,
+      "annual_mean": -0.14,
+      "lowess": -0.06
+    },
+    {
+      "year": 1956,
+      "annual_mean": -0.19,
+      "lowess": -0.05
+    },
+    {
+      "year": 1957,
+      "annual_mean": 0.05,
+      "lowess": -0.04
+    },
+    {
+      "year": 1958,
+      "annual_mean": 0.06,
+      "lowess": -0.01
+    },
+    {
+      "year": 1959,
+      "annual_mean": 0.03,
+      "lowess": 0.01
+    },
+    {
+      "year": 1960,
+      "annual_mean": -0.03,
+      "lowess": 0.03
+    },
+    {
+      "year": 1961,
+      "annual_mean": 0.06,
+      "lowess": 0.01
+    },
+    {
+      "year": 1962,
+      "annual_mean": 0.03,
+      "lowess": -0.01
+    },
+    {
+      "year": 1963,
+      "annual_mean": 0.05,
+      "lowess": -0.03
+    },
+    {
+      "year": 1964,
+      "annual_mean": -0.2,
+      "lowess": -0.04
+    },
+    {
+      "year": 1965,
+      "annual_mean": -0.11,
+      "lowess": -0.05
+    },
+    {
+      "year": 1966,
+      "annual_mean": -0.06,
+      "lowess": -0.06
+    },
+    {
+      "year": 1967,
+      "annual_mean": -0.02,
+      "lowess": -0.05
+    },
+    {
+      "year": 1968,
+      "annual_mean": -0.08,
+      "lowess": -0.03
+    },
+    {
+      "year": 1969,
+      "annual_mean": 0.05,
+      "lowess": -0.02
+    },
+    {
+      "year": 1970,
+      "annual_mean": 0.03,
+      "lowess": 0
+    },
+    {
+      "year": 1971,
+      "annual_mean": -0.08,
+      "lowess": 0
+    },
+    {
+      "year": 1972,
+      "annual_mean": 0.01,
+      "lowess": 0
+    },
+    {
+      "year": 1973,
+      "annual_mean": 0.16,
+      "lowess": 0
+    },
+    {
+      "year": 1974,
+      "annual_mean": -0.07,
+      "lowess": 0.01
+    },
+    {
+      "year": 1975,
+      "annual_mean": -0.01,
+      "lowess": 0.02
+    },
+    {
+      "year": 1976,
+      "annual_mean": -0.1,
+      "lowess": 0.04
+    },
+    {
+      "year": 1977,
+      "annual_mean": 0.18,
+      "lowess": 0.07
+    },
+    {
+      "year": 1978,
+      "annual_mean": 0.07,
+      "lowess": 0.12
+    },
+    {
+      "year": 1979,
+      "annual_mean": 0.16,
+      "lowess": 0.16
+    },
+    {
+      "year": 1980,
+      "annual_mean": 0.26,
+      "lowess": 0.2
+    },
+    {
+      "year": 1981,
+      "annual_mean": 0.32,
+      "lowess": 0.21
+    },
+    {
+      "year": 1982,
+      "annual_mean": 0.14,
+      "lowess": 0.22
+    },
+    {
+      "year": 1983,
+      "annual_mean": 0.31,
+      "lowess": 0.21
+    },
+    {
+      "year": 1984,
+      "annual_mean": 0.16,
+      "lowess": 0.21
+    },
+    {
+      "year": 1985,
+      "annual_mean": 0.12,
+      "lowess": 0.22
+    },
+    {
+      "year": 1986,
+      "annual_mean": 0.18,
+      "lowess": 0.24
+    },
+    {
+      "year": 1987,
+      "annual_mean": 0.32,
+      "lowess": 0.27
+    },
+    {
+      "year": 1988,
+      "annual_mean": 0.39,
+      "lowess": 0.31
+    },
+    {
+      "year": 1989,
+      "annual_mean": 0.27,
+      "lowess": 0.33
+    },
+    {
+      "year": 1990,
+      "annual_mean": 0.45,
+      "lowess": 0.33
+    },
+    {
+      "year": 1991,
+      "annual_mean": 0.4,
+      "lowess": 0.33
+    },
+    {
+      "year": 1992,
+      "annual_mean": 0.22,
+      "lowess": 0.33
+    },
+    {
+      "year": 1993,
+      "annual_mean": 0.23,
+      "lowess": 0.33
+    },
+    {
+      "year": 1994,
+      "annual_mean": 0.32,
+      "lowess": 0.34
+    },
+    {
+      "year": 1995,
+      "annual_mean": 0.45,
+      "lowess": 0.37
+    },
+    {
+      "year": 1996,
+      "annual_mean": 0.33,
+      "lowess": 0.4
+    },
+    {
+      "year": 1997,
+      "annual_mean": 0.46,
+      "lowess": 0.42
+    },
+    {
+      "year": 1998,
+      "annual_mean": 0.61,
+      "lowess": 0.44
+    },
+    {
+      "year": 1999,
+      "annual_mean": 0.38,
+      "lowess": 0.47
+    },
+    {
+      "year": 2000,
+      "annual_mean": 0.39,
+      "lowess": 0.5
+    },
+    {
+      "year": 2001,
+      "annual_mean": 0.54,
+      "lowess": 0.52
+    },
+    {
+      "year": 2002,
+      "annual_mean": 0.63,
+      "lowess": 0.55
+    },
+    {
+      "year": 2003,
+      "annual_mean": 0.62,
+      "lowess": 0.58
+    },
+    {
+      "year": 2004,
+      "annual_mean": 0.53,
+      "lowess": 0.61
+    },
+    {
+      "year": 2005,
+      "annual_mean": 0.68,
+      "lowess": 0.62
+    },
+    {
+      "year": 2006,
+      "annual_mean": 0.64,
+      "lowess": 0.62
+    },
+    {
+      "year": 2007,
+      "annual_mean": 0.66,
+      "lowess": 0.63
+    },
+    {
+      "year": 2008,
+      "annual_mean": 0.54,
+      "lowess": 0.64
+    },
+    {
+      "year": 2009,
+      "annual_mean": 0.66,
+      "lowess": 0.64
+    },
+    {
+      "year": 2010,
+      "annual_mean": 0.72,
+      "lowess": 0.65
+    },
+    {
+      "year": 2011,
+      "annual_mean": 0.61,
+      "lowess": 0.67
+    },
+    {
+      "year": 2012,
+      "annual_mean": 0.65,
+      "lowess": 0.7
+    },
+    {
+      "year": 2013,
+      "annual_mean": 0.68,
+      "lowess": 0.74
+    },
+    {
+      "year": 2014,
+      "annual_mean": 0.75,
+      "lowess": 0.79
+    },
+    {
+      "year": 2015,
+      "annual_mean": 0.9,
+      "lowess": 0.83
+    },
+    {
+      "year": 2016,
+      "annual_mean": 1.02,
+      "lowess": 0.88
+    },
+    {
+      "year": 2017,
+      "annual_mean": 0.92,
+      "lowess": 0.91
+    },
+    {
+      "year": 2018,
+      "annual_mean": 0.85,
+      "lowess": 0.93
+    },
+    {
+      "year": 2019,
+      "annual_mean": 0.98,
+      "lowess": 0.92
+    },
+    {
+      "year": 2020,
+      "annual_mean": 1.02,
+      "lowess": 0.92
+    },
+    {
+      "year": 2021,
+      "annual_mean": 0.85,
+      "lowess": 0.91
+    },
+    {
+      "year": 2022,
+      "annual_mean": 0.89,
+      "lowess": 0.9
+    }
+   ]

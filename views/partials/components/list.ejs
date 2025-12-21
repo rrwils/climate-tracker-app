@@ -1,0 +1,14 @@
+<button class="uk-button uk-button-default" type="button">Pick a country</button>
+    <div uk-dropdown="pos: bottom-left; stretch: true">
+        <ul class="uk-nav uk-dropdown-nav">
+          <% pledges.forEach(function(pledge) { %>
+            <li>
+              <a href="/pledge/<%= pledge.country %>">
+                <div class="nav-text">
+                  <p class="uk-margin-remove-bottom uk-margin-remove-top"><%= pledge.country %></p>
+                </div>
+              </a>
+            </li>
+          <% }); %>
+        </ul>
+    </div>

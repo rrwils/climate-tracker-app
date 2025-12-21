@@ -1,0 +1,627 @@
+<%- include('partials/header'); %>
+
+
+<div class="uk-grid-medium uk-child-width-expand@s uk-text-left uk-margin-large-top" uk-grid>
+    <div>
+        <div onload='hideTotal()'>
+            <div id="wrap">
+                <form action="" id="carbonfootprintform" onsubmit="return false;">
+                <div>
+                    <div class="cont_order">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-legend">
+                            <h1 class="uk-text-center uk-padding"><span>Calculate your carbon footprint</span></h1>
+                        </legend>
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How many members are in your household?</label>
+                            <select class="uk-select" aria-label="Select" id="householdmembers" name='householdmembers' onchange="calculateTotal()">
+                                <option value="None">Select</option>
+                                <option value="alone">I live alone</option>
+                                <option value="1-other">I live with 1 other person</option>
+                                <option value="2-others">I live with 2 other people</option>
+                                <option value="3-others">I live with 3 other people</option>
+                                <option value="4-others">I live with 4 other people</option>
+                                <option value="5-others">I live with 5 other people</option>
+                                <option value="over-5">I live with >5 other people</option>
+                            </select>
+                        </div>
+                        
+                
+                        
+                        <div class="uk-margin">
+                            <label class="uk-form-label">What is the size of your house?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="housesize" name='housesize' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="large-house">A large house</option>
+                            <option value="medium-house">A medium house</option>
+                            <option value="small-house">A small house</option>
+                            <option value="apartment">Apartment</option>
+                            </select>
+
+                        </div>
+
+                    
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Do you eat meat?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="meat" name='meat' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="daily">On a daily basis</option>
+                            <option value="frequently">A few times per week</option>
+                            <option value="vegetarian">No, I'm vegetarian</option>
+                            <option value="vegan">No, I'm vegan</option>
+                            </select>
+
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">What do you eat?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="consumptionmix" name='consumptionmix' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="prepackaged">Mostly prepackaged convenience food</option>
+                            <option value="balanced">A good balance of fresh and convenience food </option>
+                            <option value="local">Only fresh and locally sourced food </option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How often do you run the dishwasher?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="dishwasher" name='dishwasher' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frequently">More than 9 times a week</option>
+                            <option value="often">4-9 times a week</option>
+                            <option value="sometimes">1-3 times a week</option>
+                            <option value="nousage">Not at all</option>
+                            </select>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How often do you run the washing machine?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="washingmachine" name='washingmachine' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frequently">More than 9 times a week</option>
+                            <option value="often">4-9 times a week</option>
+                            <option value="sometimes">1-3 times a week</option>
+                            <option value="nousage">Not at all</option>
+                            </select>
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How many household purchases (e.g. furniture, electronics or other household gadgets) do you make each year?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="householdpurchases" name='householdpurchases' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frq4">Over 7 new pieces</option>
+                            <option value="frq3">5-7 pieces</option>
+                            <option value="frq2">3-5 pieces</option>
+                            <option value="frq1">Less than 3 pieces</option>
+                            <option value="noitems">Almost nothing or only purchase secondhand iterms</option>
+                            </select>
+
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How many times do you fill your rubbish bins each week?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="waste" name='waste' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frq4">4 bins</option>
+                            <option value="frq3">3 bins</option>
+                            <option value="frq2">2 bins</option>
+                            <option value="frq1">1 bin</option>
+                            <option value="noitems">Less than 1 bin</option>
+                            </select>
+                            
+                        </div>
+                        
+                        <div class="uk-margin">
+                            <label class="uk-form-label">Do you recycle? (Check all boxes that apply)</label>
+
+                        </div>
+                        <ul class="uk-list">
+                            <li><input class="uk-checkbox" type="checkbox" id="foodwaste" name='foodwaste' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='foodwaste' class="inlinelabel">Food Waste</label>
+                            </li>
+
+                            <li><input class="uk-checkbox" type="checkbox" id="glass" name='glass' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='glass' class="inlinelabel">Glass</label>
+                            </li>
+
+                            <li><input class="uk-checkbox" type="checkbox" id="plastic" name='plastic' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='plastic' class="inlinelabel">Plastic</label>
+                            </li>
+
+                            <li><input class="uk-checkbox" type="checkbox" id="paper" name='paper' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='paper' class="inlinelabel">Paper</label>
+                            </li>
+
+                            <li><input class="uk-checkbox" type="checkbox" id="aluminium" name='aluminium' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='aluminium' class="inlinelabel">Aluminium</label>
+                            </li>
+
+                            <li><input class="uk-checkbox" type="checkbox" id="steel" name='steel' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='steel' class="inlinelabel">Steel</label>
+                            </li>
+
+                            <li><input class="uk-checkbox" type="checkbox" id="norecycle" name='norecycle' onclick="calculateTotal()" />
+                                <label class="uk-form-label" for='norecycle' class="inlinelabel">I don't recycle</label>
+                            </li>
+                    
+                        </ul>
+
+                        
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How far do you travel with your own car?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="caruse" name='caruse' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frq4">More than 15,000 miles per year</option>
+                            <option value="frq3">10,000-15,000 miles per year</option>
+                            <option value="frq2">1,000-10,000 miles per year</option>
+                            <option value="frq1">Less than 1,000 miles per year</option>
+                            <option value="nousage">I don't have a car</option>
+                            </select>
+
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How far do you travel with public transportation?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="publictransport" name='publictransport' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frq5">More than 20,000 miles per year</option>
+                            <option value="frq4">15,000-20,000 miles per year</option>
+                            <option value="frq3">10,000-15,000 miles per year</option>
+                            <option value="frq2">1,000-10,000 miles per year</option>
+                            <option value="frq1">Less than 1,000 miles per year</option>
+                            <option value="nousage">I don't use public transportation</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="uk-margin">
+                            <label class="uk-form-label">How far do you travel by plane?</label>
+                
+                            <select class="uk-select" aria-label="Select" id="flight" name='flight' onchange="calculateTotal()">
+                            <option value="None">Select</option>
+                            <option value="frq3">Very far (to other continents)</option>
+                            <option value="frq2">Further distances (to nearby countries or states)</option>
+                            <option value="frq1">Short distances only</option>
+                            <option value="nousage">I don't travel by plane</option>
+                            </select>
+                            
+                        </div>
+                        
+                        
+                        </fieldset>
+                    </div>
+                </div>  
+            </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-background-secondary uk-light uk-padding uk-panel">
+            <p class="uk-text-large" id="totalPrice">
+            </p>
+            <p>
+                If your score is less than 60 points, then you are making a small impact on your planet. If it is higher than 60, then you might want to consider ways to reduce your carbon footprint.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="uk-section uk-section-secondary">
+        <div class="uk-container uk-width-3-5@m">
+            <h3 class="uk-margin-medium-left">Generate a tip for reducing carbon footprint:</h3>
+            <div>
+                <div class="uk-card uk-card-muted uk-card-hover uk-card-body uk-dark">
+                    <p class="uk-text-lead uk-text-success uk-text-uppercase uk-margin-small-left uk-h5"><%= recommendation.recommendation %></p>
+                </div>
+            </div>
+            <h5 class="uk-margin-medium-left uk-text-default">Want another tip? Refresh this page.</h5>
+        </div>
+    </div>
+
+            <!-- <hr class="uk-divider-icon"> -->
+
+            
+
+    
+
+
+    <script>
+        // QUESTION 1 - HOUSEHOLD MEMBERS
+        var household_members= new Array();
+        household_members["None"]=0;
+        household_members["alone"]=14;
+        household_members["1-other"]=12;
+        household_members["2-others"]=10;
+        household_members["3-others"]=8;
+        household_members["4-others"]=6;
+        household_members["5-others"]=4;
+        household_members["over-5"]=2;
+
+
+
+        //This function finds the filling price based on the 
+        //drop down selection
+        function getHouseholdMembers()
+        {
+        var countHouseholdMembers=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var selectedNumber = theForm.elements["householdmembers"];
+        
+
+        countHouseholdMembers = household_members[selectedNumber.value];
+
+        return countHouseholdMembers;
+        }
+
+        // QUESTION 2 - HOUSE SIZE
+
+        var house_size= new Array();
+        house_size["None"]=0;
+        house_size["large-house"]=10;
+        house_size["medium-house"]=7;
+        house_size["small-house"]=4;
+        house_size["apartment"]=2;
+
+
+
+        //drop down selection
+        function getHouseSize()
+        {
+        var countHouseSize=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["housesize"];
+
+        countHouseSize = house_size[selectedNumber.value];
+
+        return countHouseSize;
+        }
+
+
+        // QUESTION 3 - MEAT CONSUMPTION
+
+        var meat_consumption= new Array();
+        meat_consumption["None"]=0;
+        meat_consumption["daily"]=10;
+        meat_consumption["frequently"]=8;
+        meat_consumption["vegetarian"]=4;
+        meat_consumption["vegan"]=2;
+
+        //drop down selection
+        function getMeatConsumption()
+        {
+        var countMeatConsumption=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["meat"];
+
+        countMeatConsumption = meat_consumption[selectedNumber.value];
+
+        return countMeatConsumption;
+        }
+
+        //
+
+        // QUESTION 4 - CONSUMPTION MIX
+
+        var consumption_mix= new Array();
+        consumption_mix["None"]=0;
+        consumption_mix["prepackaged"]=12;
+        consumption_mix["balanced"]=6;
+        consumption_mix["local"]=2;
+
+        //drop down selection
+        function getConsumptionMix()
+        {
+        var countConsumptionMix=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["consumptionmix"];
+
+        countConsumptionMix = consumption_mix[selectedNumber.value];
+
+        return countConsumptionMix;
+        }
+
+        //
+
+        // QUESTION 5 - DISHWASHER USAGE
+
+        var dishwasher_use= new Array();
+        dishwasher_use["None"]=0;
+        dishwasher_use["frequently"]=3;
+        dishwasher_use["often"]=2;
+        dishwasher_use["sometimes"]=1;
+        dishwasher_use["nousage"]=0;
+
+        //drop down selection
+        function getDishwasherUse()
+        {
+        var countDishwasherUse=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["dishwasher"];
+
+        countDishwasherUse = dishwasher_use[selectedNumber.value];
+
+        return countDishwasherUse;
+        }
+
+        //
+
+        // QUESTION 6 - WASHING MACHINE USAGE
+
+        var washingmachine_use= new Array();
+        washingmachine_use["None"]=0;
+        washingmachine_use["frequently"]=3;
+        washingmachine_use["often"]=2;
+        washingmachine_use["sometimes"]=1;
+        washingmachine_use["nousage"]=0;
+
+        //drop down selection
+        function getWashingMachineUse()
+        {
+        var countWashingmachineUse=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["washingmachine"];
+
+        countWashingmachineUse = washingmachine_use[selectedNumber.value];
+
+        return countWashingmachineUse;
+        }
+
+        //
+
+        // QUESTION 7 - HOUSEHOLD PURCHASES
+
+        var household_purchases= new Array();
+        household_purchases["None"]=0;
+        household_purchases["frq4"]=10;
+        household_purchases["frq3"]=8;
+        household_purchases["frq2"]=6;
+        household_purchases["frq1"]=4;
+        household_purchases["noitems"]=2;
+
+        //drop down selection
+        function getHouseholdPurchases()
+        {
+        var countHouseholdPurchases=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["householdpurchases"];
+
+        countHouseholdPurchases = household_purchases[selectedNumber.value];
+
+        return countHouseholdPurchases;
+        }
+
+        //
+
+        // QUESTION 8 - WASTE
+
+        var waste= new Array();
+        waste["None"]=0;
+        waste["frq4"]=50;
+        waste["frq3"]=40;
+        waste["frq2"]=30;
+        waste["frq1"]=20;
+        waste["noitems"]=5;
+
+        //drop down selection
+        function getWaste()
+        {
+        var countWaste=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["waste"];
+
+        countWaste = waste[selectedNumber.value];
+
+        return countWaste;
+        }
+
+        //
+
+        // QUESTION 10 - CAR USE
+
+        var caruse= new Array();
+        caruse["None"]=0;
+        caruse["frq4"]=12;
+        caruse["frq3"]=10;
+        caruse["frq2"]=6;
+        caruse["frq1"]=4;
+        caruse["nousage"]=0;
+
+        //drop down selection
+        function getCarUse()
+        {
+        var countCarUse=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["caruse"];
+
+        countCarUse = caruse[selectedNumber.value];
+
+        return countCarUse;
+        }
+
+        //
+
+        // QUESTION 11 - PUBLIC TRANSPORT USE
+
+        var publictransport= new Array();
+        publictransport["None"]=0;
+        publictransport["frq5"]=12;
+        publictransport["frq4"]=10;
+        publictransport["frq3"]=6;
+        publictransport["frq2"]=4;
+        publictransport["frq1"]=2;
+        publictransport["nousage"]=0;
+
+        //drop down selection
+        function getPublicTransportUse()
+        {
+        var countPublicTransportUse=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["publictransport"];
+
+        countPublicTransportUse = publictransport[selectedNumber.value];
+
+        return countPublicTransportUse;
+        }
+
+        //
+
+
+        // QUESTION 12 - PLANE USE
+
+        var flight= new Array();
+        flight["None"]=0;
+        flight["frq3"]=20;
+        flight["frq2"]=6;
+        flight["frq1"]=2;
+        flight["nousage"]=0;
+
+        //drop down selection
+        function getPlaneUse()
+        {
+        var countPlaneUse=0;
+        var theForm = document.forms["carbonfootprintform"];
+        var selectedNumber = theForm.elements["flight"];
+
+        countPlaneUse = flight[selectedNumber.value];
+
+        return countPlaneUse;
+        }
+
+        //
+
+
+        //QUESTION 11 - DO YOU RECYCLE?
+        function FoodWaste()
+        {
+        var foodwasteOffset=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includeFoodWaste = theForm.elements["foodwaste"];
+
+        if(includeFoodWaste.checked==true)
+        {
+            foodwasteOffset=-4;
+        }
+        return foodwasteOffset;
+        }
+
+        function Glass()
+        {
+        var glassOffset=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includeGlass = theForm.elements["glass"];
+
+        if(includeGlass.checked==true)
+        {
+            glassOffset=-4;
+        }
+        return glassOffset;
+        }
+
+        function Plastic()
+        {
+        var plasticOffset=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includePlastic = theForm.elements["plastic"];
+
+        if(includePlastic.checked==true)
+        {
+            plasticOffset=-4;
+        }
+        return plasticOffset;
+        }
+
+        function Paper()
+        {
+        var paperOffset=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includePaper = theForm.elements["paper"];
+
+        if(includePaper.checked==true)
+        {
+            paperOffset=-4;
+        }
+        return paperOffset;
+        }
+
+        function Aluminium()
+        {
+        var aluminiumOffset=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includeAluminium = theForm.elements["aluminium"];
+
+        if(includeAluminium.checked==true)
+        {
+            aluminiumOffset=-4;
+        }
+        return aluminiumOffset;
+        }
+
+        function Steel()
+        {
+        var steelOffset=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includeSteel = theForm.elements["steel"];
+
+        if(includeSteel.checked==true)
+        {
+            steelOffset=-4;
+        }
+        return steelOffset;
+        }
+
+        function NoRecycle()
+        {
+        var noRecycle=0;
+        var theForm = document.forms["carbonfootprintform"];
+
+        var includeNoRecycle = theForm.elements["norecycle"];
+
+        if(includeNoRecycle.checked==true)
+        {
+            noRecycle=24;
+        }
+        return noRecycle;
+        }
+
+
+            
+        function calculateTotal()
+        {
+        var totalCarbonFootprint = getHouseholdMembers() + getHouseSize() + getMeatConsumption() + getConsumptionMix() + getDishwasherUse() + getWashingMachineUse() + getHouseholdPurchases() + getWaste() + getCarUse() + getPublicTransportUse() + getPlaneUse() + FoodWaste() + Glass() + Plastic() + Paper() + Aluminium() + Steel() + NoRecycle();
+
+        //display the result
+        var divobj = document.getElementById('totalPrice');
+        divobj.style.display='block';
+        divobj.innerHTML = "Total carbon footprint: "+totalCarbonFootprint + " points";
+
+        }
+
+        function hideTotal()
+        {
+        var divobj = document.getElementById('totalPrice');
+        divobj.style.display='none';
+        }
+
+    </script>
+
+<%- include('partials/footer'); %>

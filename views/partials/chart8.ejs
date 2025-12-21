@@ -1,0 +1,216 @@
+<div id="chart8">
+    
+</div>
+
+<script type="text/javascript">
+
+
+    let chartEight = echarts.init(document.getElementById('chart8'));
+
+    
+    let optionChartEight = {
+    tooltip: {
+            formatter: '<b>${c} billion</b>',
+            textStyle: {
+            fontWeight: 300,
+            color: '#212121'
+          },
+            trigger: 'item',
+            triggerOn: 'mousemove'
+        },
+    label: {
+        fontFamily: 'helvetica',
+        fontSize: 15
+            }, 
+    series: {
+        type: 'sankey',
+        layout: 'none',
+        emphasis: {
+        focus: 'adjacency'
+        },
+        data: [
+        {
+            name: 'Central Asia and Eastern Europe',
+            itemStyle: {
+            color: '#b30000'
+            },
+        },
+        {
+            name: 'East Asia and Pacific',
+            itemStyle: {
+            color: '#7c1158'
+            },
+        },
+        {
+            name: 'Latin America & Caribbean',
+            itemStyle: {
+            color: '#4421af'
+            },
+        },
+        {
+            name: 'Middle East and North Africa',
+            itemStyle: {
+            color: '#1a53ff'
+            },
+        },
+        {
+            name: 'Other Oceania',
+            itemStyle: {
+            color: '#0d88e6'
+            },
+        },
+        {
+            name: 'South Asia',
+            itemStyle: {
+            color: '#00b7c7'
+            },
+        },
+        {
+            name: 'Sub-Saharan Africa',
+            itemStyle: {
+            color: '#5ad45a'
+            },
+        },
+        {
+            name: 'Transregional',
+            itemStyle: {
+            color: '#8be04e'
+            },
+        },
+        {
+            name: 'US & Canada',
+            itemStyle: {
+            color: '#ebdc78'
+            },
+        },
+        {
+            name: 'Western Europe',
+            itemStyle: {
+            color: '#00b4d8'
+            },
+        },
+        {
+            name: 'public',
+            itemStyle: {
+            color: 'red'
+            },
+        },
+        {
+            name: 'private',
+            itemStyle: {
+            color: '#00b4d8'
+            },
+        }
+        ],
+        links: [
+        {
+            source: 'Central Asia and Eastern Europe',
+            target: 'public',
+            value: 20
+        },
+        {
+            source: 'Central Asia and Eastern Europe',
+            target: 'private',
+            value: 13
+        },
+        {
+            source: 'East Asia and Pacific',
+            target: 'public',
+            value: 180
+        },
+        {
+            source: 'East Asia and Pacific',
+            target: 'private',
+            value: 113
+        },
+        {
+            source: 'Latin America & Caribbean',
+            target: 'public',
+            value: 18
+        },
+        {
+            source: 'Latin America & Caribbean',
+            target: 'private',
+            value: 17
+        },
+        {
+            source: 'Middle East and North Africa',
+            target: 'public',
+            value: 9
+        },
+        {
+            source: 'Middle East and North Africa',
+            target: 'private',
+            value: 7
+        },
+        {
+            source: 'Other Oceania',
+            target: 'public',
+            value: 1
+        },
+        {
+            source: 'Other Oceania',
+            target: 'private',
+            value: 8
+        },
+        {
+            source: 'South Asia',
+            target: 'public',
+            value: 19
+        },
+        {
+            source: 'South Asia',
+            target: 'private',
+            value: 11
+        },
+        {
+            source: 'Sub-Saharan Africa',
+            target: 'public',
+            value: 17
+        },
+        {
+            source: 'Sub-Saharan Africa',
+            target: 'private',
+            value: 2
+        },
+        {
+            source: 'Transregional',
+            target: 'public',
+            value: 11
+        },
+        {
+            source: 'Transregional',
+            target: 'private',
+            value: 0
+        },
+        {
+            source: 'US & Canada',
+            target: 'public',
+            value: 4
+        },
+        {
+            source: 'US & Canada',
+            target: 'private',
+            value: 80
+        },
+        {
+            source: 'Western Europe',
+            target: 'public',
+            value: 43
+        },
+        {
+            source: 'Western Europe',
+            target: 'private',
+            value: 62
+        }
+        ]
+    }
+    };
+
+    chartEight.setOption(optionChartEight);
+
+    window.onresize = function() {
+        chartEight.resize();
+      };
+
+</script>

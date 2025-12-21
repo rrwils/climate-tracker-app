@@ -1,0 +1,83 @@
+<div id="chart4">
+    
+</div>
+
+<script type="text/javascript">
+    var base = 'http://localhost:3000/api/fuel-emissions/';
+    var endpoint = '<%=emission.country%>';
+    var url = base + endpoint;
+    jQuery.getJSON(url).done(processResult)
+
+    let chartFour = echarts.init(document.getElementById('chart4'));
+
+
+    function processResult(data) {
+    console.log(data);
+
+    let optionChartFour = {
+      dataset: {
+        dimensions: ['year', 'coal', 'oil', 'gas'],
+        source: data
+      },
+      tooltip: {
+        trigger: 'axis',
+        valueFormatter: (value) => value.toFixed(1) + ' million tonnes',
+        axisPointer: {
+            type: 'cross',
+            label: {
+            backgroundColor: '#6a7985'
+            }
+        },
+        textStyle: {
+            fontWeight: 300,
+            color: '#212121'
+          }
+      },
+      legend: {
+        data: ['Coal', 'Oil', 'Gas']
+      },
+      xAxis: {
+        type: 'category',
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {},
+          emphasis: {
+            focus: 'series'
+          },
+          data: data.coal
+        },
+        {
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {},
+          emphasis: {
+            focus: 'series'
+          },
+          data: data.oil
+        },
+        {
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {},
+          emphasis: {
+            focus: 'series'
+          },
+          data: data.gas
+        }
+      ]
+    };
+
+    chartFour.setOption(optionChartFour);
+
+    window.onresize = function() {
+        chartFour.resize();
+      };
+    };
+
+</script>

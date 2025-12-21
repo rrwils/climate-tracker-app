@@ -1,0 +1,128 @@
+<%- include('partials/header'); %>
+<main>
+
+
+
+    <div class="uk-section uk-section-primary uk-light">
+        <div class="uk-container">
+            
+            <h1 class="uk-text-center">Climate Pledges by Country</h1>
+
+            <h4 class="uk-text-center"><%- include('partials/components/list',pledges); %> </h4>
+            
+    
+        </div>
+    </div>
+    
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container uk-width-3-5@m">
+    
+            <div class="uk-margin-auto uk-padding">
+                <p class="uk-text-secondary uk-margin-large-top">Countries have various targets and commitment levels which are as follows.</p>
+        
+                    <div class="uk-container">
+                        <div uk-grid>
+                            <div class="uk-width-auto@m">
+                                <ul class="uk-tab-left " uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+                                    <li><a href="#">PROPOSED / IN DISCUSSION</a></li>
+                                    <li><a href="#">DECLARATION / PLEDGE</a></li>
+                                    <li><a href="#">IN CORPORATE STRATEGY</a></li>
+                                    <li><a href="#">IN POLICY DOCUMENT</a></li>
+                                    <li><a href="#">IN LAW</a></li>
+                                    <li><a href="#">ACHIEVED (SELF-DECLARED)</a></li>
+                                    <li><a href="#">ACHIEVED (EXTERNALLY VALIDATED)</a></li>
+                                </ul>
+                            </div>
+                            <div class="uk-width-expand@m">
+                                <ul id="component-tab-left" class="uk-switcher">
+                                    <li>The country's leadership is considering a target or has joined an international initiative (such as the Climate Neutrality Coalition or Climate Ambition Alliance) that commits to setting a net zero target, but it has not yet taken any action to make this commitment a reality.</li>
+                                    <li>The country has announced a goal but has not yet formalised it in any way.</li>
+                                    <li>The goal is included in a corporate policy document, such as an annual corporate social responsibility (CSR) report.</li>
+                                    <li>The goal is included in a planning or policy document. For example, policy strategy documents published by ministries.</li>
+                                    <li>The target has legal weight, for instance, it is contained in a piece of law or an administrative directive.</li>
+                                    <li>The country has declared net zero, but the achievement is not verified externally.</li>
+                                    <li>Net zero has been externally verified by an independent third party.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+        </div>
+    </div>
+
+    <hr class="uk-divider-icon">
+
+
+    <div class="uk-section uk-section-primary uk-light">
+        <div class="uk-container uk-width-3-5@m">
+    
+            <h1 class="uk-margin-auto uk-text-center">Climate Finance Flows</h1>
+            <h3 class="uk-text-center uk-margin-remove-top">(2019/2020 Annual Average)</h3>
+    
+            <p class="uk-padding uk-margin-auto">
+                According to <a href="https://www.climatepolicyinitiative.org/publication/global-landscape-of-climate-finance-2021/">Climate Policy Initiative's 2021 report</a>, total climate finance globally has increased over the last decade, reaching US$632 billion, but is slowing down in the last few years.
+            </p>
+    
+        </div>
+    </div>
+    
+    <div class="uk-section uk-section-muted uk-light">
+        <div class="uk-container">
+    
+            <%- include('partials/climatefinancesvg'); %>
+    
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-primary uk-light">
+        <div class="uk-container uk-width-3-5@m">
+    
+            <h2 id="title2" class="uk-margin-auto uk-text-center">Further breakdown: Public v Private Finance</h2>
+    
+            <p class="uk-padding uk-margin-auto">
+                Were investments primarily funded by private or public finance? As you can see they differ by region.
+            </p>
+    
+        </div>
+    </div>
+    
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container uk-width-3-5@m ">
+
+            <h4 class="uk-margin-auto uk-padding uk-text-large" id="chart-title">
+                Distribution of climate finance by actor level (2019/2020 average)
+                <%- include('partials/chart8'); %>
+            </h4>
+    
+            
+    
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-primary uk-light">
+        <div class="uk-container uk-width-3-5@m">
+    
+            <h2 id="title2" class="uk-margin-auto uk-text-center">Further breakdown: Adaptation v Mitigation Finance</h2>
+    
+            <p class="uk-padding uk-margin-auto">
+                A significant majority of climate finance went towards mitigation efforts such as investments in renewable energy, but adaptation finance is just as crucial to improve our response to current and future effects of climate change.
+            </p>
+    
+        </div>
+    </div>
+    
+    <div class="uk-section uk-section-muted uk-light">
+        <div class="uk-container uk-width-3-5@m">
+
+            <h4 class="uk-margin-auto uk-padding uk-text-large" id="chart-title">
+                Distribution of climate finance by use (2019/2020 average)
+                <%- include('partials/chart9'); %>
+            </h4>
+    
+        </div>
+    </div>
+
+
+</main>
+<%- include('partials/footer'); %>

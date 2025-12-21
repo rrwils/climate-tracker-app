@@ -1,0 +1,112 @@
+<%- include('partials/subheader'); %>
+
+
+<div class="uk-card uk-card-secondary">
+  <div class="uk-card-body">
+      <h1 class="uk-card-title uk-text-uppercase"><b><%= emission.country %> Emission Country Profile</b></h1>
+      <h4>Population: <%= emission.population %></h4>
+      <h4>GDP: <%= emission.gdp %> US dollars</h4>
+   </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+  <div class="uk-container">
+
+    <h2 class="uk-width-5-6@m uk-margin-auto" id="title">How much CO2 does <%= emission.country %> emit annually?</h2>
+
+  </div>
+</div>
+
+<div class="uk-section uk-section-default uk-dark">
+    
+
+  <h4 class="uk-margin-large-left uk-text-large" id="chart-title">
+      Annual CO2 emissions
+  </h4>
+  <h6 class="uk-margin-large-left uk-text-muted">
+    Land use change is not included.
+  </h6>
+
+  <div class="uk-container">
+    <%- include('partials/chart1'); %>
+  </div>
+
+</div>
+
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+  
+      <h2 class="uk-width-5-6@m uk-margin-auto" id="title"><span class="uk-text-lead">Countries with larger populations are more likely to emit more so it is useful to know</span> <span class="uk-text-italic">how much CO2 does an average person emit in <%= emission.country %>? </span></h2>
+  
+    </div>
+</div>
+  
+<div class="uk-section uk-section-default uk-dark">
+  <h4 class="uk-margin-large-left uk-text-large" id="chart-title">
+    Per capita CO2 emissions
+  </h4>
+  <h6 class="uk-margin-large-left uk-text-muted">
+  Land use change is not included.
+  </h6>
+
+      <div class="uk-container">
+          <%- include('partials/chart2'); %>
+      </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+  
+      <h2 class="uk-width-5-6@m uk-margin-auto" id="title"><span class="uk-text-lead">Okay, macro perspective.</span> Large emitters now do not necessarily mean they are or have been responsible for a large share of CO2 emissions globally. So, is <%= emission.country %>? <span class="uk-text-lead">Has it changed much?</span> </h2>
+  
+    </div>
+</div>
+  
+<div class="uk-section uk-section-default uk-dark">
+
+      <h4 class="uk-margin-large-left uk-text-large" id="chart-title">
+        Annual share of global CO2 emissions
+      </h4>
+      <h6 class="uk-margin-large-left uk-text-muted">
+      Land use change is not included.
+      </h6>
+
+      <div class="uk-container">
+          <%- include('partials/chart3'); %>
+      </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+  
+      <h2 class="uk-width-5-6@m uk-margin-auto" id="title">How much CO2 emissions in <%= emission.country %> are produced from coal, oil and gas?</h2>
+  
+    </div>
+</div>
+  
+<div class="uk-section uk-section-default uk-dark">
+      <h4 class="uk-margin-large-left uk-text-large" id="chart-title">
+        Contributions of fossil fuels to CO2 emissions
+      </h4>
+      <div class="uk-container">
+          <%- include('partials/chart4'); %>
+      </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+  
+      <p class="uk-width-5-6@m uk-margin-auto">The chart above can show you how the energy mix of <%= emission.country %> is changing. It is hard to quit fossil fuels <a href="https://www.brookings.edu/essay/why-are-fossil-fuels-so-hard-to-quit/">for many reasons</a>. The transition to an all-renewable energy is not straightforward and not everything can be electrified. Wind and solar power, for example, do not have the energy density of fossil fuels which can provide very high heat that many industrial processes need.</p>
+  
+    </div>
+  </div>
+
+
+
+<footer >
+    <%- include('partials/footer'); %>
+</footer>
+
+
+</body>
+ </html>

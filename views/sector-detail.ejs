@@ -1,0 +1,143 @@
+<%- include('partials/subheader-3'); %>
+
+<div class="uk-card uk-card-secondary">
+  <div class="uk-card-body">
+      <h1 class="uk-card-title uk-text-uppercase"><b><%= sectoral.country %> Emission Country Profile</b></h1>
+   </div>
+</div>
+
+  <div class="uk-section uk-section-muted">
+    <div class="uk-container">
+  
+      <h2 class="uk-width-5-6@m uk-margin-auto" id="title">Greenhouse Gas Emissions by Sector</h2>
+      <p class="uk-width-5-6@m uk-margin-auto uk-text-muted">Use legend as filter</p>
+    </div>
+</div>
+  
+<div class="uk-section uk-section-default uk-dark">
+      <div class="uk-container">
+        <div id="chart5">
+      
+        </div>
+      </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+  <div class="uk-container">
+
+    <p class="uk-width-5-6@m uk-margin-auto">What interesting observations did you make?</p>
+
+    <p class="uk-width-5-6@m uk-margin-auto">Go back and pick another country to see whether the same few sectors are also the biggest emitters or check out what <span class="uk-text-bolder uk-text-secondary"><%= sectoral.country %></span>  has pledged to do.</p>
+
+    <div class="uk-width-5-6@m uk-container">
+      <h2 uk-margin>
+        <button class="uk-button uk-button-default"><a href="/sector">GO BACK</a></button>
+        <button class="uk-button uk-button-primary"><a href="/action">NEXT, TO ACTION</a></button>
+      </h2>
+    </div>
+
+  </div>
+</div>
+  
+
+<footer >
+    <%- include('partials/footer'); %>
+</footer>
+
+<script type="text/javascript">
+
+    var base = 'http://localhost:3000/api/sectoral-emission/';
+    var endpoint = '<%=sectoral.country%>';
+    var url = base + endpoint;
+    jQuery.getJSON(url).done(processResult)
+
+    let chartFive = echarts.init(document.getElementById('chart5'));
+
+    function processResult(data) {
+    console.log(data);
+
+    let optionChartFive = {
+      dataset: {
+        dimensions: ['sector', '2019', '2018', '2017','2016', '2015'],
+        source: data
+      },
+      tooltip: {
+        trigger: 'axis',
+        valueFormatter: (value) => value.toFixed(2) + ' metric tons of CO2',
+        axisPointer: {
+            type: 'shadow'
+        },
+        textStyle: {
+            fontWeight: 300,
+            color: '#212121'
+          },
+      },
+      legend: {
+        textStyle: {
+          fontFamily: 'helvetica',
+          fontSize: 19
+        }
+      },
+      label: {
+        fontFamily: 'helvetica',
+        fontSize: 19
+             }, 
+
+      grid: {
+      left: '3%',
+      right: '4%',
+      containLabel: true
+      },
+      xAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01],
+        axisLabel: {
+          show: true,
+        }
+      },
+      yAxis: {
+        type: 'category',
+        inverse: true,
+        data: data.sector,
+        axisLabel: {
+          color: '#212121',
+          fontWeight: 400,
+          fontSize: 15
+        }
+      },
+      series: [
+        {
+          type: 'bar',
+          data: data[2019]
+        },
+        {
+          type: 'bar',
+          data: data[2018]
+        },
+        {
+          type: 'bar',
+          data: data[2017]
+        },
+        {
+          type: 'bar',
+          data: data[2016]
+        },
+        {
+          type: 'bar',
+          data: data[2015]
+        }
+      ]
+    };
+
+    chartFive.setOption(optionChartFive);
+
+    window.onresize = function() {
+        chartFive.resize();
+      };
+    };
+
+
+</script>
+
+</body>
+</html>

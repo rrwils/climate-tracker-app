@@ -1,0 +1,61 @@
+    <div id="chart1">
+
+    </div>
+
+
+<script type="text/javascript">
+
+    var base = 'http://localhost:3000/api/emissions/';
+    var endpoint = '<%=emission.country%>';
+    var url = base + endpoint;
+    jQuery.getJSON(url).done(processResult)
+
+    let chartOne = echarts.init(document.getElementById('chart1'));
+
+    function processResult(data) {
+    console.log(data);
+
+    let optionChartOne = {
+      dataset: {
+        dimensions: ['year', 'annualco2'],
+        source: data
+      },
+      tooltip: {
+        trigger: 'axis',
+        valueFormatter: (value) => value.toFixed(1) + ' million tonnes',
+        axisPointer: {
+          type: 'line',
+          label: {
+            backgroundColor: '#6a7985'
+          }
+        },
+        textStyle: {
+            fontWeight: 300,
+            color: '#212121'
+          }
+      },
+      xAxis: {
+        type: 'category',
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          type: 'line',
+          smooth: true
+        }
+      ]
+    };
+
+
+    chartOne.setOption(optionChartOne);
+
+
+    window.onresize = function() {
+        chartOne.resize();
+      };
+    };
+
+  
+</script>

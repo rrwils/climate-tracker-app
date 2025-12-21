@@ -1,0 +1,217 @@
+<div id="chart9">
+    
+</div>
+
+<script type="text/javascript">
+
+
+    let chartNine = echarts.init(document.getElementById('chart9'));
+
+    
+    let optionChartNine = {
+        tooltip: {
+        formatter: '<b>${c} bn</b>',
+        textStyle: {
+            fontWeight: 300,
+            color: '#212121'
+          },
+        trigger: 'item',
+        triggerOn: 'mousemove'
+            },
+        label: {
+            fontFamily: 'helvetica',
+            fontSize: 15
+                }, 
+        series: {
+            type: 'sankey',
+            layout: 'none',
+            emphasis: {
+            focus: 'adjacency'
+            },
+            data: [
+            {
+                name: 'Central Asia and Eastern Europe',
+                itemStyle: {
+                color: '#b30000'
+                },
+            },
+            {
+                name: 'East Asia and Pacific',
+                itemStyle: {
+                color: '#7c1158'
+                },
+            },
+            {
+                name: 'Latin America & Caribbean',
+                itemStyle: {
+                color: '#4421af'
+                },
+            },
+            {
+                name: 'Middle East and North Africa',
+                itemStyle: {
+                color: '#1a53ff'
+                },
+            },
+            {
+                name: 'Other Oceania',
+                itemStyle: {
+                color: '#0d88e6'
+                },
+            },
+            {
+                name: 'South Asia',
+                itemStyle: {
+                color: '#00b7c7'
+                },
+            },
+            {
+                name: 'Sub-Saharan Africa',
+                itemStyle: {
+                color: '#5ad45a'
+                },
+            },
+            {
+                name: 'Transregional',
+                itemStyle: {
+                color: '#8be04e'
+                },
+            },
+            {
+                name: 'US & Canada',
+                itemStyle: {
+                color: '#ebdc78'
+                },
+            },
+            {
+                name: 'Western Europe',
+                itemStyle: {
+                color: '#00b4d8'
+                },
+            },
+            {
+                name: 'adaptation',
+                itemStyle: {
+                color: '#ed533b'
+                },
+            },
+            {
+                name: 'mitigation',
+                itemStyle: {
+                color: '#f6d55c'
+                },
+            }
+            ],
+            links: [
+            {
+                source: 'Central Asia and Eastern Europe',
+                target: 'adaptation',
+                value: 2.5
+            },
+            {
+                source: 'Central Asia and Eastern Europe',
+                target: 'mitigation',
+                value: 28
+            },
+            {
+                source: 'East Asia and Pacific',
+                target: 'adaptation',
+                value: 19.5
+            },
+            {
+                source: 'East Asia and Pacific',
+                target: 'mitigation',
+                value: 271
+            },
+            {
+                source: 'Latin America & Caribbean',
+                target: 'adaptation',
+                value: 4.5
+            },
+            {
+                source: 'Latin America & Caribbean',
+                target: 'mitigation',
+                value: 28
+            },
+            {
+                source: 'Middle East and North Africa',
+                target: 'adaptation',
+                value: 2.4
+            },
+            {
+                source: 'Middle East and North Africa',
+                target: 'mitigation',
+                value: 12.1
+            },
+            {
+                source: 'Other Oceania',
+                target: 'adaptation',
+                value: 0.1
+            },
+            {
+                source: 'Other Oceania',
+                target: 'mitigation',
+                value: 8.4
+            },
+            {
+                source: 'South Asia',
+                target: 'adaptation',
+                value: 4.3
+            },
+            {
+                source: 'South Asia',
+                target: 'mitigation',
+                value: 25
+            },
+            {
+                source: 'Sub-Saharan Africa',
+                target: 'adaptation',
+                value: 7.4
+            },
+            {
+                source: 'Sub-Saharan Africa',
+                target: 'mitigation',
+                value: 9.4
+            },
+            {
+                source: 'Transregional',
+                target: 'adaptation',
+                value: 2.7
+            },
+            {
+                source: 'Transregional',
+                target: 'mitigation',
+                value: 4.8
+            },
+            {
+                source: 'US & Canada',
+                target: 'adaptation',
+                value: 0.3
+            },
+            {
+                source: 'US & Canada',
+                target: 'mitigation',
+                value: 82
+            },
+            {
+                source: 'Western Europe',
+                target: 'adaptation',
+                value: 2
+            },
+            {
+                source: 'Western Europe',
+                target: 'mitigation',
+                value: 102
+            }
+            ]
+        }
+
+    };
+
+    chartNine.setOption(optionChartNine);
+
+    window.onresize = function() {
+        chartNine.resize();
+      };
+
+</script>

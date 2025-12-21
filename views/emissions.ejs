@@ -1,0 +1,36 @@
+<%- include('partials/header'); %>
+<main>
+
+
+
+    <div class="uk-section uk-section-primary uk-light">
+        <div class="uk-container">
+            
+            <h1 class="uk-text-center">Emissions by Country</h4>
+
+            <h4 class="uk-text-center uk-dark"><%- include('partials/components/co2',emissions); %> to get an overview in terms of:
+                <ul class="uk-list">
+                    <li>•	Annual CO2 emissions</li>
+                    <li>•	CO2 emissions per capita</li>
+                    <li>•	Share of global CO2 emissions</li>
+                    <li>•	Contributions of fossil fuels to CO2 emissions</li>
+                </ul>
+            </h4>
+            
+    
+        </div>
+    </div>
+    
+    <div class="uk-section uk-section-muted uk-dark">
+        <div class="uk-containe uk-width-3-5@m uk-align-center uk-padding">
+    
+            <h6 class="uk-text-center uk-text-large uk-text-bold">Why do we care about CO2 so much?</h6>
+            <p class="uk-width-5-6@m uk-margin-auto@m">CO2 has contributed to warming more than other heat-trapping gases and they also stick around in the atmosphere for a longer time period. <a href="https://www.tandfonline.com/doi/pdf/10.4155/cmt.13.80">40% of a pulse of CO2 emission remains in the atmosphere for a century, 20% for 1000 years, while the last 10% will take 400 to 500 generations to leave.</a></p>
+    
+        </div>
+    </div>
+
+
+</main>
+
+<%- include('partials/footer'); %>

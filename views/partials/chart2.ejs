@@ -1,0 +1,57 @@
+<div id="chart2">
+
+</div>
+
+<script type="text/javascript">
+    var base = 'http://localhost:3000/api/per-capita-emissions/';
+    var endpoint = '<%=emission.country%>';
+    var url = base + endpoint;
+    jQuery.getJSON(url).done(processResult)
+
+    let chartTwo = echarts.init(document.getElementById('chart2'));
+
+
+    function processResult(data) {
+    console.log(data);
+
+    let optionChartTwo = {
+      dataset: {
+        dimensions: ['year', 'percapitaco2'],
+        source: data
+      },
+      tooltip: {
+        trigger: 'axis',
+        valueFormatter: (value) => value.toFixed(2) + ' tonnes',
+        axisPointer: {
+          type: 'line',
+          label: {
+            backgroundColor: '#6a7985'
+          }
+        },
+        textStyle: {
+            fontWeight: 300,
+            color: '#212121'
+          }
+      },
+      xAxis: {
+        type: 'category',
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          type: 'line',
+          smooth: true
+        }
+      ]
+    };
+
+    chartTwo.setOption(optionChartTwo);
+
+    window.onresize = function() {
+        chartTwo.resize();
+      };
+    };
+
+</script>

@@ -1,0 +1,89 @@
+<%- include('partials/subheader-2'); %>
+
+<div class="uk-card uk-card-secondary">
+  <div class="uk-card-body">
+
+      <h1 class="uk-card-title uk-text-uppercase uk-text-success"><b><%= pledge.country %></b></h1>
+      <h4 class="uk-card-title uk-text-uppercase">pledged to achieve
+        <span class="uk-text-success uk-text-bold"><%= pledge.end_target %></span> by
+        <span class="uk-text-success uk-text-bold"><%= pledge.end_target_year %></span>.</h4>
+
+      <h4 class="uk-margin uk-h4">Target Status: <span class="uk-text-uppercase uk-text-bolder"> <%= pledge.end_target_status %> </span> </h4>
+      <h4 class="uk-margin uk-h4">Interim Target: <span class="uk-text-uppercase uk-text-bolder"> <%= pledge.interim_target %> by <%= pledge.interim_target_year %></span> </h4>
+
+   </div>
+</div>
+
+<div class="uk-section uk-section-muted">
+  <div class="uk-container">
+    <div class="uk-child-width-1-2@s uk-grid-collapse uk-text-center uk-height-large" uk-grid>
+      <div>
+          <div class="uk-tile uk-tile-muted uk-height-large">
+              <p></p>
+              <p></p>
+              <h2 class="uk-text-bold uk-text-large">What do these targets mean?</h2>
+              <span uk-icon="icon: arrow-right; ratio:5"></span>
+          </div>
+      </div>
+      <div>
+          <div class="uk-tile uk-tile-muted uk-height-large">
+            <div class="uk-width-4-5@m uk-margin-auto uk-button-group uk-align-center">
+              <ul class="uk-subnav uk-subnav-pill" uk-switcher>
+                  <li><a href="#">1.5 target</a></li>
+                  <li><a href="#">Carbon neutrality</a></li>
+                  <li><a href="#">Climate neutrality</a></li>
+                  <li><a href="#">Absolute emissions target</a></li>
+                  <li><a href="#">Emissions intensity target</a></li>
+                  <li><a href="#">Emissions reduction target</a></li>
+                  <li><a href="#">GHG neutrality</a></li>
+                  <li><a href="#">Net zero</a></li>
+                  <li><a href="#">Reduction against Business as Usual (BAU)</a></li>
+                  <li><a href="#">Zero carbon</a></li>
+              </ul>
+              
+              <ul class="uk-switcher uk-margin">
+                  <li>A commitment to limiting global warming to 1.5 degrees</li>
+                  <li>Zero net human-caused CO2 emissions by a certain date. CO2 emissions are balanced so that they are equal or less than the CO2 removed through the planet's natural absorption.</li>
+                  <li>The concept is very similar to carbon neutrality but it extends to all GHG emissions.</li>
+                  <li>No matter what the present level of emissions is, absolute emissions targets specify the quantity of emissions to strive for by a specific year or time period. For instance, "X will limit emissions to no more than 10 million tonnes of CO2 equivalent in 2025."</li>
+                  <li>A target for emissions in relation to a non-emissions unit, such as per unit of output or per unit of GDP. For instance, "X will reduce the amount of CO2 emissions produced per unit of GDP by 18% over the period of 2021 to 2025."</li>
+                  <li>Bring annual GHG emissions down by a target year in comparison to a historical baseline year; for instance, "X will bring its GHG emissions down by 50% below 1990 levels by 2030."</li>
+                  <li>The concept is similar to climate neutrality but it only refers to GHG emissions and excludes geoengineering.</li>
+                  <li>The concept is similar to carbon neutrality, but it covers all GHG emissions and does not permit compensated emissions (e.g. via offsets). It requires abatement of emissions.</li>
+                  <li>Specifies a reduction compared with a baseline of what emissions were projected to have been at a certain date, for example "X will reduce emissions 29% below business-as-usual by 2030."</li>
+                  <li>No carbon emissions are being produced from a product or service.</li>
+              </ul>
+            
+          </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="uk-section uk-section-muted">
+  <div class="uk-container">
+
+    <p class="uk-width-5-6@m uk-margin-auto">Feel free to explore. Go back and pick another country or calculate your carbon footprint.</p>
+
+  
+
+    <div class="uk-width-5-6@m uk-container">
+      <h2 uk-margin>
+        <button class="uk-button uk-button-default"><a href="/action">GO BACK</a></button>
+        <button class="uk-button uk-button-primary"><a href="/calculator">CALCULATE MY CARBON FOOTPRINT</a></button>
+      </h2>
+    </div>
+
+  </div>
+</div>
+
+<footer >
+    <%- include('partials/footer'); %>
+  </footer>
+
+</body>
+ </html>

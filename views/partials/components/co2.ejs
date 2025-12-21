@@ -1,0 +1,14 @@
+<button class="uk-button uk-button-default" type="button">Pick a country</button>
+    <div uk-dropdown="pos: bottom-left; stretch: true">
+        <ul class="uk-nav uk-dropdown-nav">
+          <% emissions.forEach(function(emission) { %>
+            <li>
+              <a href="/emission/<%= emission.country %>">
+                <div class="nav-text">
+                  <p class="uk-margin-remove-bottom uk-margin-remove-top"><%= emission.country %></p>
+                </div>
+              </a>
+            </li>
+          <% }); %>
+        </ul>
+    </div>

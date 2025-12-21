@@ -1,0 +1,83 @@
+<%- include('partials/header'); %>
+<main>
+
+
+    <div class="uk-background-default uk-width-3-5@m uk-padding uk-container">
+
+        <p class="uk-margin-auto uk-text-secondary">Climate change has led to <a href="https://www.theguardian.com/world/2020/oct/12/un-highlights-dramatic-global-rise-in-extreme-weather-since-2020">a dramatic increase in extreme weather events in the last decades.</a></p> 
+        <p class="uk-margin-auto uk-text-secondary">Unfortunately, direct experience with extreme weather does not immediately translate into a concern for climate change and its consequences for many. Apart from climate change disbelief, some people forget about the experience pretty quickly after some time, some do not attribute extreme events to climate change, and some have other “more” important things to worry about such as unemployment or the cost of living crisis.</p>
+        <p class="uk-margin-auto uk-text-secondary">So the graph below that shows the change in global temperature over time may not do anything for you once you leave this page and continue to go about your daily life. </p>
+        <p class="uk-margin-auto uk-text-secondary">But why not stick around, navigate and learn more to realise that things are happening and progressing.</p>
+        <p class="uk-margin-auto uk-text-secondary">Let's start with...</p>
+        <h2 id="title">How close are we to warming above the 1.5°C limit set by the IPCC? See for yourself.</h2>
+    
+
+          <div class="uk-card uk-card-muted uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-height-match="target: > div > .uk-card">
+            <div class="uk-card uk-background-muted">
+                <h5 class="uk-margin-medium-left uk-margin-top uk-text-large uk-light" id="chart-title">
+                    Change in average global temperature
+                    <%- include('partials/chart7'); %>
+                </h5>
+            </div>
+            <div>
+                <div class="uk-card-body uk-background-muted">
+                    <h3 class="uk-card-title uk-text-italic">Why is 1.5°C the limit? What does it mean?</h3>
+                    <p>
+                        According to <a href="https://www.ipcc.ch/sr15/chapter/spm/">the IPCC projections</a>, the effects of climate change will become irreversible once global warming goes above 1.5 degrees.
+                    </p>
+                    <p>
+                        Think more heatwaves, droughts and severe flooding due to sea level rise.
+                    </p>
+                    <p>
+                        People who are dependent on agricultural and coastal livelihoods, such as those living in dryland regions and small island developing states, also face a higher risk of poverty.
+                    </p>
+                    <p>
+                        Note that the chart on the left refers to the change in <i>average</i> global temperature compared to the long-term average from 1951 to 1980.
+                    </p>
+                    <p>
+                        Many land regions and seasons have experienced warming greater than the global annual average, including in the Arctic.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="uk-background-default uk-width-3-5@m uk-padding uk-container">
+
+        <p class="uk-margin-auto uk-text-secondary">This web app pools together some key data about emissions and climate action around the world and visualises it with cool graphs like the one below, so you won't get bored from reading though there are occasional information nuggets to keep you better informed.</p>
+
+        
+
+        <h4 class="uk-width-6-7@m uk-margin-auto  uk-text-large" id="chart-title">
+            Top annual CO2 emitters from 1850s to 2021
+        </h4>
+        <h5 class="uk-width-2-3@m uk-margin-auto">
+            in million tonnes
+        </h5>
+        <div class="uk-container uk-container-large uk-align-center uk-width-4-5@m uk-margin-auto">
+            <%- include('partials/chart6'); %>
+        </div>
+
+        
+
+    </div>
+
+    <div class="uk-background-muted uk-width-3-5@m uk-padding uk-container uk-height-small">
+        <h2 class="uk-width-4-5@m uk-margin-auto uk-text-center">Find out more: <%- include('partials/components/co2',emissions); %></h2>
+        
+    </div>
+
+    <p></p>
+    <p></p>
+
+
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+  
+    
+</main>
+<%- include('partials/footer'); %>
