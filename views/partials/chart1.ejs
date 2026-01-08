@@ -13,6 +13,10 @@
 
     let chartOne = echarts.init(document.getElementById('chart1'));
 
+    window.addEventListener('load', function() {
+    chartOne.resize();  // recalculates layout
+    });
+
     function processResult(data) {
     console.log(data);
 
