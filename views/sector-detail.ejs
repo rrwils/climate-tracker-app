@@ -46,9 +46,7 @@
 
 <script type="text/javascript">
 
-    var base = 'http://localhost:3000/api/sectoral-emission/';
-    var endpoint = '<%=sectoral.country%>';
-    var url = base + endpoint;
+    var url = '/api/sectoral-emission/<%= sectoral.country %>';
     jQuery.getJSON(url).done(processResult)
 
     let chartFive = echarts.init(document.getElementById('chart5'));
