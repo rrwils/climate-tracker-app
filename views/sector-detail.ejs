@@ -54,10 +54,21 @@
     function processResult(data) {
     console.log(data);
 
+    let chartData = data.map( d => {
+      return {
+        sector: d.sector,
+        '2019': Number(d['2019']),
+        '2018': Number(d['2018']),
+        '2017': Number(d['2017']),
+        '2016': Number(d['2016']),
+        '2015': Number(d['2015'])
+      };
+    })
+
     let optionChartFive = {
       dataset: {
         dimensions: ['sector', '2019', '2018', '2017','2016', '2015'],
-        source: data
+        source: chartData
       },
       tooltip: {
         trigger: 'axis',
@@ -96,7 +107,7 @@
       yAxis: {
         type: 'category',
         inverse: true,
-        data: data.sector,
+        data: chartData.map( d => d.sector),
         axisLabel: {
           color: '#212121',
           fontWeight: 400,
@@ -106,34 +117,48 @@
       series: [
         {
           type: 'bar',
-          data: data[2019]
+          encode: {
+            x: '2019',
+            y: 'sector'
+          }
         },
         {
           type: 'bar',
-          data: data[2018]
+          encode: {
+            x: '2018',
+            y: 'sector'
+          }
         },
         {
           type: 'bar',
-          data: data[2017]
+          encode: {
+            x: '2017',
+            y: 'sector'
+          }
         },
         {
           type: 'bar',
-          data: data[2016]
+          encode: {
+            x: '2016',
+            y: 'sector'
+          }
         },
         {
           type: 'bar',
-          data: data[2015]
+          encode: {
+            x: '2015',
+            y: 'sector'
+          }
         }
       ]
     };
 
     chartFive.setOption(optionChartFive);
 
-    window.onresize = function() {
-        chartFive.resize();
-      };
-    };
+    window.addEventListener('resize', () => chartFive.resize());
+    }
 
+    window.addEventListener('load', () => chartFive.resize());
 
 </script>
 

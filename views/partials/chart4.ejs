@@ -15,10 +15,19 @@
     function processResult(data) {
     console.log(data);
 
+    let chartData = data.map( d => {
+      return {
+        year: new Date(d.year).getFullYear(),  // converts "1987-04-23" → 1987
+        coal: Number(d.coal),
+        oil: Number(d.oil),
+        gas: Number(d.gas)
+      };
+    })
+
     let optionChartFour = {
       dataset: {
         dimensions: ['year', 'coal', 'oil', 'gas'],
-        source: data
+        source: chartData
       },
       tooltip: {
         trigger: 'axis',
@@ -48,37 +57,39 @@
           type: 'line',
           stack: 'Total',
           areaStyle: {},
-          emphasis: {
-            focus: 'series'
-          },
-          data: data.coal
+          encode: {
+            x: 'year',
+            y: 'coal'
+          }
         },
         {
           type: 'line',
           stack: 'Total',
           areaStyle: {},
-          emphasis: {
-            focus: 'series'
-          },
-          data: data.oil
+          encode: {
+            x: 'year',
+            y: 'oil'
+          }
         },
         {
           type: 'line',
           stack: 'Total',
           areaStyle: {},
-          emphasis: {
-            focus: 'series'
-          },
-          data: data.gas
+          encode: {
+            x: 'year',
+            y: 'gas'
+          }
         }
       ]
     };
 
     chartFour.setOption(optionChartFour);
 
-    window.onresize = function() {
-        chartFour.resize();
-      };
-    };
+    // Responsive resizing
+        window.addEventListener('resize', () => chartFour.resize());
+    }
+
+    window.addEventListener('load', () => chartFour.resize());
+
 
 </script>

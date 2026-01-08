@@ -1,4 +1,4 @@
-<div id="chart2">
+<div id="chart2" style="width: 100%; height: 400px;">
 
 </div>
 
@@ -15,10 +15,17 @@
     function processResult(data) {
     console.log(data);
 
+    let chartData = data.map( d => {
+      return {
+        year: new Date(d.year).getFullYear(),  // converts "1987-04-23" → 1987
+        percapitaco2: Number(d.percapitaco2)
+      };
+    })
+
     let optionChartTwo = {
       dataset: {
         dimensions: ['year', 'percapitaco2'],
-        source: data
+        source: chartData
       },
       tooltip: {
         trigger: 'axis',
@@ -43,16 +50,25 @@
       series: [
         {
           type: 'line',
-          smooth: true
+          smooth: true,
+          encode : {
+            x: 'year',
+            y: 'percapitaco2'
+          }
         }
       ]
     };
 
     chartTwo.setOption(optionChartTwo);
 
-    window.onresize = function() {
-        chartTwo.resize();
-      };
-    };
+    window.addEventListener('resize', function() {
+            chartX.resize();
+        });
+    }
+    
+    // Make sure chart resizes when page fully loads
+    window.addEventListener('load', function() {
+        chartX.resize();
+    });
 
 </script>
