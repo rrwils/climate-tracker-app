@@ -1,4 +1,5 @@
-const config = require('./config_local');
+require("dotenv").config();
+const config = require('./config');
 const mysql = require('mysql');
 const express = require('express');
 const cors = require("cors");
