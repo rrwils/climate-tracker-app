@@ -176,7 +176,7 @@ app.get("/emission/:country", function (req, res) {
 
 // route for sectoral home page
 app.get("/sector", function (req, res) {
-  const statement = "SELECT country FROM sectorals GROUP BY country"
+  const statement = "SELECT country FROM sectorals GROUP BY country ORDER BY country ASC";
 
   pool.query(statement)
   .then(result => {

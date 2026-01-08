@@ -3,9 +3,10 @@
 </div>
 
 <script type="text/javascript">
-    var base = 'http://localhost:3000/api/per-capita-emissions/';
-    var endpoint = '<%=emission.country%>';
-    var url = base + endpoint;
+    // var base = 'http://localhost:3000/api/per-capita-emissions/';
+    // var endpoint = '<%=emission.country%>';
+    // var url = base + endpoint;
+    var url = '/api/per-capita-emissions/<%= emission.country %>';
     jQuery.getJSON(url).done(processResult)
 
     let chartTwo = echarts.init(document.getElementById('chart2'));
