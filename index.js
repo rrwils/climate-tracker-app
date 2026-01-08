@@ -41,7 +41,7 @@ console.log("DB_USER:", process.env.DB_USER);
 
 // route for home page
 app.get("/", function (req, res) {
-  const statement = "SELECT country FROM emissions GROUP BY country"
+  const statement = "SELECT country FROM emissions GROUP BY country ORDER BY country ASC";
 
   pool.query(statement)
   .then(result => {
@@ -58,7 +58,7 @@ app.get("/", function (req, res) {
 
 // route for emissions page
 app.get("/emissions", function (req, res) {
-  const statement = "SELECT country FROM emissions GROUP BY country"
+  const statement = "SELECT country FROM emissions GROUP BY country ORDER BY country ASC";
 
   pool.query(statement)
   .then(result => {
@@ -78,7 +78,7 @@ app.get('/api/emissions/:country', cors(), (req, res) => {
 
     const statement = `
       SELECT country,
-            EXTRACT(YEAR FROM year) AS year,
+            EXTRACT(YEAR FROM year::date) AS year,
             co2 AS annualco2
       FROM emissions
       WHERE country = $1
@@ -95,7 +95,7 @@ app.get('/api/emissions/:country', cors(), (req, res) => {
 
 // route for per capita emissions api
 app.get('/api/per-capita-emissions/:country', cors(), (req, res) => {
-  const statement = "SELECT country, EXTRACT(YEAR FROM year) AS year, co2_per_capita AS percapitaco2 FROM emissions WHERE country = $1";
+  const statement = "SELECT country, EXTRACT(YEAR FROM year::date) AS year, co2_per_capita AS percapitaco2 FROM emissions WHERE country = $1";
 
   
   pool.query(statement, [req.params.country])
@@ -109,7 +109,7 @@ app.get('/api/per-capita-emissions/:country', cors(), (req, res) => {
 
 // route for global share emissions api
 app.get('/api/global-share-emissions/:country', cors(), (req, res) => {
-  const statement = "SELECT country, EXTRACT(YEAR FROM year) AS year, global_share AS globalshareco2 FROM emissions WHERE country = $1";
+  const statement = "SELECT country, EXTRACT(YEAR FROM year::date) AS year, global_share AS globalshareco2 FROM emissions WHERE country = $1";
 
   pool.query(statement, [req.params.country])
     .then(result => res.json(result.rows))
@@ -125,7 +125,7 @@ app.get('/api/fuel-emissions/:country', cors(), (req, res) => {
 
   const statement = `
     SELECT country,
-           EXTRACT(YEAR FROM year) AS year,
+           EXTRACT(YEAR FROM year::date) AS year,
            coal, gas, oil
     FROM emissions
     WHERE country = $1
@@ -146,7 +146,7 @@ app.get("/emission/:country", function (req, res) {
     SELECT country,
            population,
            gdp,
-           EXTRACT(YEAR FROM year) AS year,
+           EXTRACT(YEAR FROM year::date) AS year,
            co2 AS annualco2,
            co2_per_capita AS percapitaco2,
            global_share AS globalshareco2
